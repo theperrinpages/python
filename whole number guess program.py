@@ -26,7 +26,7 @@ for a in range(3):
         if a == 2:
             clear()
             sleep(0.7)
-            print("You have used all of your chances!\nGood luck next time!")
+            print("\n\tYou have used all of your chances!\nGood luck next time!")
             break
         else:
             clear()
@@ -40,4 +40,4 @@ for a in range(3):
         print("Success! Wohoo! :)")
         break
 
-
+print(f"The computer generated random number was {magic_number}")
