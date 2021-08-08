@@ -23,11 +23,11 @@ def show_courses():
     else:
         os.system("clear")  # linux compatibility
 
-    print("Insertion successful :)")
+    print("List of items learnt today:")
     for x, y in lists.items():
-        strings = "[+] " + str(y) + " " + x + "\n"
-    print(strings)
-    file_create(strings)
+        strings = "[+] " + str(y) + " " + x
+        file_create(strings + "\n")
+        print(strings)
 
 
 def time_func():
@@ -36,16 +36,11 @@ def time_func():
 
 
 def file_create(log):
-    f = open("learningdb.log", "a")
+    f = open("learning.log", "a")
     f.write(log)
     f.close()
-    print("++ Activity log ++)")
-
-    g = open("learningdb.log", "r")
-    print(g.read())
-    g.close()
-    time.sleep(3)
 
 
 courses_in()
 show_courses()
+time.sleep(0.6)
