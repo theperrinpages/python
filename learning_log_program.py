@@ -1,6 +1,7 @@
 # This is my learning tracking program.
 import datetime
 import os
+import time
 
 lists = {}
 
@@ -35,14 +36,15 @@ def time_func():
 
 
 def file_create(log):
-    f = open("test.log", "a")
+    f = open("learningdb.log", "a")
     f.write(log)
     f.close()
     print("Insertion successful! :)")
 
-    g = open("test.log", "r")
+    g = open("learningdb.log", "r")
     print(g.read())
-    f.close()
+    g.close()
+    time.sleep(3)
 
 
 courses_in()
